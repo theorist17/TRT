@@ -4,6 +4,13 @@
     tools:context=".FullScreenViewActivity">
 
     <item
+        android:id="@+id/action_translate"
+        android:title="@string/action_translate"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_translate_white_24dp"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/action_delete"
         android:title="@string/action_delete"
         android:orderInCategory="100"

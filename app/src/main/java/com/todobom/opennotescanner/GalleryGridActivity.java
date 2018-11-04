@@ -42,6 +42,7 @@ public class GalleryGridActivity extends AppCompatActivity
     private MenuItem mShare;
     private MenuItem mTag;
     private MenuItem mDelete;
+    private MenuItem mTranslate;
     private DragSelectRecyclerView recyclerView;
     private AlertDialog.Builder deleteConfirmBuilder;
     private boolean selectionMode = false;
@@ -69,10 +70,11 @@ public class GalleryGridActivity extends AppCompatActivity
     }
 
     private void setSelectionMode(boolean selectionMode) {
-        if (mShare !=null && mDelete != null ) {
+        if (mShare !=null && mDelete != null && mTranslate != null ) {
             mShare.setVisible(selectionMode);
             mTag.setVisible(selectionMode);
             mDelete.setVisible(selectionMode);
+            mTranslate.setVisible(selectionMode);
         }
         this.selectionMode = selectionMode;
     }
@@ -287,6 +289,7 @@ public class GalleryGridActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_gallery, menu);
 
+
         mShare = menu.findItem(R.id.action_share);
         mShare.setVisible(false);
 
@@ -295,6 +298,9 @@ public class GalleryGridActivity extends AppCompatActivity
 
         mDelete = menu.findItem(R.id.action_delete);
         mDelete.setVisible(false);
+
+        mTranslate = menu.findItem(R.id.action_translate);
+        mTranslate.setVisible(false);
 
         invalidateOptionsMenu();
 
@@ -316,6 +322,8 @@ public class GalleryGridActivity extends AppCompatActivity
                 shareImages();
                 return true;
             case R.id.action_tag:
+                break;
+            case R.id.action_translate:
                 break;
             case R.id.action_delete:
                 deleteConfirmBuilder.create().show();

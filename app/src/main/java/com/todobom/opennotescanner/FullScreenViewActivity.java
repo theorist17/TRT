@@ -146,6 +146,8 @@ public class FullScreenViewActivity extends AppCompatActivity {
             case R.id.action_share:
                 shareImage();
                 return true;
+            case R.id.action_translate:
+                break;
             case R.id.action_delete:
                 deleteConfirmBuilder.create().show();
                 return true;
