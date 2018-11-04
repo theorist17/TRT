@@ -6,6 +6,7 @@
 
     <string name="title_activity_full_image">Scanned Image Viewer</string>
     <string name="images_scanned">Images Scanned</string>
+    <string name="action_translate">Translate</string>
     <string name="action_share">Share</string>
     <string name="action_delete">Delete</string>
     <string name="confirm_title">Confirm</string>
