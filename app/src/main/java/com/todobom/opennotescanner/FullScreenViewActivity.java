@@ -147,6 +147,7 @@ public class FullScreenViewActivity extends AppCompatActivity {
                 shareImage();
                 return true;
             case R.id.action_translate:
+                ocrImage();
                 break;
             case R.id.action_delete:
                 deleteConfirmBuilder.create().show();
@@ -209,4 +210,11 @@ public class FullScreenViewActivity extends AppCompatActivity {
         startActivity(Intent.createChooser(shareIntent, getString(R.string.share_snackbar)));
     }
 
+    public void ocrImage(){
+        Intent intent = new Intent(this, OCRActivity.class);
+//        EditText editText = (EditText) findViewById(R.id.editText);
+//        String message = editText.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 }

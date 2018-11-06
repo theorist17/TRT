@@ -190,7 +190,6 @@ public class GalleryGridActivity extends AppCompatActivity
 
     }
 
-
     ThumbAdapter myThumbAdapter;
 
     @Override
