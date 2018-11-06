@@ -212,9 +212,9 @@ public class FullScreenViewActivity extends AppCompatActivity {
 
     public void ocrImage(){
         Intent intent = new Intent(this, OCRActivity.class);
-//        EditText editText = (EditText) findViewById(R.id.editText);
-//        String message = editText.getText().toString();
-//        intent.putExtra(EXTRA_MESSAGE, message);
+        int item = mViewPager.getCurrentItem();
+        String filePath = mAdapter.getPath(item);
+        intent.putExtra("filePath", filePath);
         startActivity(intent);
     }
 }

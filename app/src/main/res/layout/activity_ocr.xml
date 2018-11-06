@@ -8,14 +8,7 @@
         android:id="@+id/btnButton1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button 1" />
-
-    <Button
-        android:id="@+id/btnButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/btnButton1"
-        android:text="Button 2" />
+        android:text="Save As" />
 
     <TextView
         android:id="@+id/textViewTest"
@@ -24,19 +17,10 @@
         android:layout_below="@+id/btnButton1"
         android:text="TextView here..." />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textViewTest"
-        android:layout_marginTop="94dp"
-        android:text="User :"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
     <ImageView
         android:id="@+id/imageViewTest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/test"
         android:layout_alignParentRight="true"
         />
