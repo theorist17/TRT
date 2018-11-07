@@ -3,7 +3,6 @@
     package="com.todobom.opennotescanner">
 
     <uses-sdk
-        android:minSdkVersion="21"
         android:targetSdkVersion="27" />
 
     <uses-feature
