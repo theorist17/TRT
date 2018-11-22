@@ -7,8 +7,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.SparseArray;
+import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.vision.Frame;
@@ -25,7 +25,7 @@ import java.net.URLConnection;
 public class OCRActivity extends Activity {
 
     ImageView ivTest;
-    TextView tvTest;
+    EditText tvTest;
     String filePath;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

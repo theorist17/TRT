@@ -270,10 +270,11 @@ public class ImageProcessor extends Handler {
         PathShape newBox = new PathShape(path , previewWidth , previewHeight);
 
         Paint paint = new Paint();
-        paint.setColor(Color.argb(64, 0, 255, 0));
+        paint.setColor(Color.argb(0, 0, 0, 0));
+//        paint.setColor(Color.argb(64, 0, 255, 0));
 
         Paint border = new Paint();
-        border.setColor(Color.rgb(0, 255, 0));
+        border.setColor(Color.rgb(255, 0, 0));
         border.setStrokeWidth(5);
 
         hud.clear();
@@ -325,7 +326,6 @@ public class ImageProcessor extends Handler {
         };
 
         Comparator<Point> diffComparator = new Comparator<Point>() {
-
             @Override
             public int compare(Point lhs, Point rhs) {
                 return Double.valueOf(lhs.y - lhs.x).compareTo(rhs.y - rhs.x);
@@ -401,7 +401,7 @@ public class ImageProcessor extends Handler {
      * the relation between them, any absolute white keeps the value, all
      * others go to absolute black.
      *
-     * src must be a 3 channel image with 8 bits per channel
+     * tvSrc must be a 3 channel image with 8 bits per channel
      *
      * @param src
      * @param threshold
@@ -504,7 +504,6 @@ public class ImageProcessor extends Handler {
         hierarchy.release();
 
         Collections.sort(contours, new Comparator<MatOfPoint>() {
-
             @Override
             public int compare(MatOfPoint lhs, MatOfPoint rhs) {
                 return Double.valueOf(Imgproc.contourArea(rhs)).compareTo(Imgproc.contourArea(lhs));

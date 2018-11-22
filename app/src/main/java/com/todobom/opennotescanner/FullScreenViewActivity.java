@@ -143,11 +143,14 @@ public class FullScreenViewActivity extends AppCompatActivity {
             case R.id.action_tag:
                 tagImage();
                 return true;
+            case R.id.action_ocr:
+                ocrImage();
+                return true;
             case R.id.action_share:
                 shareImage();
                 return true;
             case R.id.action_translate:
-                ocrImage();
+                translateImage();
                 break;
             case R.id.action_delete:
                 deleteConfirmBuilder.create().show();
@@ -210,11 +213,16 @@ public class FullScreenViewActivity extends AppCompatActivity {
         startActivity(Intent.createChooser(shareIntent, getString(R.string.share_snackbar)));
     }
 
-    public void ocrImage(){
+    public void ocrImage() {
         Intent intent = new Intent(this, OCRActivity.class);
         int item = mViewPager.getCurrentItem();
         String filePath = mAdapter.getPath(item);
         intent.putExtra("filePath", filePath);
+        startActivity(intent);
+    }
+
+    public void translateImage() {
+        Intent intent = new Intent(this, TranslationActivity.class);
         startActivity(intent);
     }
 }

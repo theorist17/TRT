@@ -4,6 +4,13 @@
     tools:context=".FullScreenViewActivity">
 
     <item
+        android:id="@+id/action_ocr"
+        android:title="@string/action_translate"
+        android:orderInCategory="100"
+        android:icon="@drawable/ocr_icon"
+        app:showAsAction="always" />
+
+    <item
         android:id="@+id/action_translate"
         android:title="@string/action_translate"
         android:orderInCategory="100"

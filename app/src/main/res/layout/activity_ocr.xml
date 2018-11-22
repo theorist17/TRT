@@ -2,20 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
-    <Button
-        android:id="@+id/btnButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save As" />
-
-    <TextView
-        android:id="@+id/textViewTest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnButton1"
-        android:text="TextView here..." />
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF"
+    >
 
     <ImageView
         android:id="@+id/imageViewTest"
@@ -24,4 +13,17 @@
         android:src="@drawable/test"
         android:layout_alignParentRight="true"
         />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+
+            android:id="@+id/textViewTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView here..." />
+
+    </ScrollView>
+
+
 </RelativeLayout>
