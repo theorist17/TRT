@@ -43,7 +43,7 @@ public class GoogleTranslate {
             BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
             String line;
             while ((line = reader.readLine()) != null) {
-                result.append(line);
+                 result.append(line);
             }
 
             JsonParser parser = new JsonParser();

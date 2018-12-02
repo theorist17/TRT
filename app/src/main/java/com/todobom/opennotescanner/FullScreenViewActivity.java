@@ -223,6 +223,9 @@ public class FullScreenViewActivity extends AppCompatActivity {
 
     public void translateImage() {
         Intent intent = new Intent(this, TranslationActivity.class);
+        int item = mViewPager.getCurrentItem();
+        String filePath = mAdapter.getPath(item);
+        intent.putExtra("filePath", filePath);
         startActivity(intent);
     }
 }

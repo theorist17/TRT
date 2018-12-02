@@ -27,6 +27,8 @@ public class OCRActivity extends Activity {
     ImageView ivTest;
     EditText tvTest;
     String filePath;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,15 +40,15 @@ public class OCRActivity extends Activity {
         Intent i = getIntent();
         filePath = i.getStringExtra("filePath");
 
-        getTextFromImageView();
+        getTextFromImageView(filePath, ivTest, tvTest);
     }
 
-    public void getTextFromImageView() {
+    public void getTextFromImageView(String filePath, ImageView imageView, EditText editText) {
         File sd = Environment.getExternalStorageDirectory();
         File image = new File(filePath);
         BitmapFactory.Options bmOptions = new BitmapFactory.Options();
         Bitmap bitmap = BitmapFactory.decodeFile(image.getAbsolutePath(),bmOptions);
-        ivTest.setImageBitmap(bitmap);
+        imageView.setImageBitmap(bitmap);
 
         //bitmap = BitmapFactory.decodeResource(getApplicationContext().getResources(), R.drawable.test);
         TextRecognizer textRecognizer = new TextRecognizer.Builder(getApplicationContext()).build();
@@ -67,9 +69,8 @@ public class OCRActivity extends Activity {
                 sb.append(myItem.getValue());
                 sb.append("\n");
             }
-            tvTest.setText(sb.toString());
+            editText.setText(sb.toString());
         }
-
     }
     public Bitmap loadBitmap(String url)
     {
