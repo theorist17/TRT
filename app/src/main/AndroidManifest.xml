@@ -80,7 +80,9 @@
             android:name="com.google.android.gms.vision.DEPENDENCIES"
             android:value="orc" />
 
-        <activity android:name=".TranslationActivity"></activity>
+        <activity android:name=".TranslationActivity"
+            android:theme="@style/FullscreenTheme.NoActionBar"
+            ></activity>
     </application>
 
 </manifest>
